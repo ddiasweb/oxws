@@ -1,0 +1,23 @@
+{
+    "name": "oxsys/oxws",
+    "type": "library",
+    "description": "Oxws, sigla para Oxsys Websites, é um framework que possibilita criar Websites e uma forma simples, rápida e eficiente.",
+    "keywords": ["framework","websites","oxws"],
+    "homepage": "http://oxws.oxsys.com.br",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Décio Dias",
+            "email": "ddiasweb@gmail.com",
+            "homepage": "http://oxsys.com.br"
+        }
+    ],
+    "require": {
+        "php": "^5.3 || ~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oxsys\\Oxws\\": "lib/Oxsys/Oxws/"
+        }
+    }
+}
