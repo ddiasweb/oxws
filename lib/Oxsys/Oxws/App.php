@@ -87,6 +87,11 @@ class App {
 		}
 	}
 
+	static function include($path) {
+		global $app;
+		$app->includeFile($path);
+	}
+
 	function processHooks($hook) {
 		$this->includeFile("hooks/$hook");
 	}
