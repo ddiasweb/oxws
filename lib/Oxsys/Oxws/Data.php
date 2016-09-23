@@ -44,7 +44,7 @@ class Data {
 		if (array_key_exists($key, Data::$data)) {
 			return Data::$data[$key];
 		} else {
-      App::include("data/$key");
+      App::load("data/$key");
       if (array_key_exists($key, Data::$data)) {
   			return Data::$data[$key];
   		} else {
