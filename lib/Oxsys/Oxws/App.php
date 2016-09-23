@@ -87,7 +87,7 @@ class App {
 		}
 	}
 
-	static function include($path) {
+	static function includeFile($path) {
 		global $app;
 		$app->includeFile($path);
 	}
