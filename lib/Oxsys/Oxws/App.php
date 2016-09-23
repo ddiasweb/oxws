@@ -30,7 +30,7 @@ namespace Oxsys\Oxws;
 
 use Oxsys\Oxws\Mapper;
 use Oxsys\Oxws\Controllers;
-use Oxsys\Oxws\Helpers\Data;
+use Oxsys\Oxws\Data;
 
 class App {
 

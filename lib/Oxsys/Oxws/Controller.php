@@ -28,45 +28,13 @@
 
 namespace Oxsys\Oxws;
 
-use Oxsys\Oxws\Utils;
-use Oxsys\Oxws\Data;
+class Controller {
 
-class Mapper {
+  protected $app;
 
-	static function getApps() {
-		global $oxws;
-		$apps = array();
-		$cPath = Utils::dirToArray('app');
-		$cApps = Utils::getArrayInto($cPath, 'apps');
-		$scan = Utils::plain($cApps);
-		foreach ($scan as $path) {
-			$apps[] = implode($path, '/');
-		}
-		return $apps;
-	}
-
-	static function getControllers($appPath) {
-		global $oxws;
-		$controllers = array();
-		$cPath = Utils::dirToArray($appPath.'/controllers/');
-		$scan = Utils::plain($cPath, true);
-		foreach ($scan as $controller) {
-			$controllers[] = implode($controller, '/');
-		}
-		return $controllers;
-	}
-
-	static function getViews($appPath) {
-		global $oxws;
-		$views = array();
-		$cPath = Utils::dirToArray($appPath.'/views/');
-		$scan = Utils::plain($cPath, true);
-		foreach ($scan as $view) {
-			$views['files'][] = implode($view, '/');
-		}
-
-		return $views;
-	}
+  public function __construct() {
+    $this->app = $GLOBALS['app'];
+  }
 
 }
 

@@ -25,12 +25,11 @@
  *    @copyright Copyright (C) 2016 Oxsys <http://oxsys.com.br/>
  *    @license   GPL-3.0 <https://github.com/ddiasweb/oxws/blob/master/LICENSE>
  */
- 
+
 namespace Oxsys\Oxws;
 
 use Oxsys\Oxws\Mapper;
 use Oxsys\Oxws\Utils;
-use Oxsys\Oxws\Helpers\Text;
 
 class Oxws {
 

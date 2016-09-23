@@ -29,8 +29,8 @@
 namespace Oxsys\Oxws;
 
 use Oxsys\Oxws\Utils;
-use Oxsys\Oxws\Helpers\Data;
-use Oxsys\Oxws\Helpers\Text;
+use Oxsys\Oxws\Data;
+use Oxsys\Oxws\Text;
 
 class Controllers {
 
@@ -54,6 +54,7 @@ class Controllers {
 			}
 		}
 		$app->includeFile("controllers/$controllerPath");
+
 		$oxws['info']['controller']['loaded'][] = $controllerPath;
 		$className = Utils::last($controllerPath).'Controller';
 		if (class_exists($className)) {

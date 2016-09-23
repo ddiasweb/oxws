@@ -25,33 +25,17 @@
  *    @copyright Copyright (C) 2016 Oxsys <http://oxsys.com.br/>
  *    @license   GPL-3.0 <https://github.com/ddiasweb/oxws/blob/master/LICENSE>
  */
- 
-namespace Oxsys\Oxws\Helpers;
 
-use Oxsys\Oxws\Core;
+namespace Oxsys\Oxws;
 
-class Data {
+use Oxsys\Oxws\Data;
 
-	private static $data = array();
+class Json {
 
-	public static function set($key, $value) {
-		Data::$data[$key] = $value;
-	}
-
-	public static function add($key, $value) {
-		Data::$data[$key][] = $value;
-	}
-
-	public static function get($key, $default = null) {
-		if (array_key_exists($key, Data::$data)) {
-			return Data::$data[$key];
-		} else {
-			return $default;
-		}
-	}
-
-	public static function pull() {
-		return Data::$data;
+	public static function render() {
+		header('Content-Type: application/json; charset=UTF-8');
+		echo json_encode(Data::pull());
+		exit();
 	}
 
 }

@@ -25,10 +25,10 @@
  *    @copyright Copyright (C) 2016 Oxsys <http://oxsys.com.br/>
  *    @license   GPL-3.0 <https://github.com/ddiasweb/oxws/blob/master/LICENSE>
  */
- 
-namespace Oxsys\Oxws\Helpers;
 
-use Oxsys\Oxws\Helpers\Data;
+namespace Oxsys\Oxws;
+
+use Oxsys\Oxws\Data;
 
 class Text {
 
