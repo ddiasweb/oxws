@@ -72,7 +72,7 @@ class App {
 	}
 
 	function includeFile($path) {
-		global $oxws;
+		global $oxws, $app;
 		$includeFile = $this->getPath($path);
 		if ($includeFile != null) {
 			if (is_file($includeFile)) {
