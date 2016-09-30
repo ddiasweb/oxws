@@ -44,13 +44,16 @@ class Data {
 		if (array_key_exists($key, Data::$data)) {
 			return Data::$data[$key];
 		} else {
-      App::load("data/$key");
-      if (array_key_exists($key, Data::$data)) {
-  			return Data::$data[$key];
-  		} else {
-  			return $default;
-  		}
+			return $default;
 		}
+	}
+
+	public static function load($key) {
+		global $app;
+		$dataPath = $app->getPath("data");
+		$json = file_get_contents("$dataPath/$key.json");
+		$data = json_decode($json, true);
+		return $data;
 	}
 
 	public static function pull() {
